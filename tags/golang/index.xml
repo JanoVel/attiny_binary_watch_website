@@ -2,22 +2,22 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Golang on ATTINY binary watch</title>
-    <link>http://replace-this-with-your-hugo-site.com/tags/golang/</link>
+    <link>https://janovel.github.io/attiny_binary_watch_website/tags/golang/</link>
     <description>Recent content in Golang on ATTINY binary watch</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>CC</copyright>
     <lastBuildDate>Thu, 27 Apr 2017 20:59:57 -0500</lastBuildDate>
     
-	<atom:link href="http://replace-this-with-your-hugo-site.com/tags/golang/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://janovel.github.io/attiny_binary_watch_website/tags/golang/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Description</title>
-      <link>http://replace-this-with-your-hugo-site.com/post/description/</link>
+      <link>https://janovel.github.io/attiny_binary_watch_website/post/description/</link>
       <pubDate>Thu, 27 Apr 2017 20:59:57 -0500</pubDate>
       
-      <guid>http://replace-this-with-your-hugo-site.com/post/description/</guid>
+      <guid>https://janovel.github.io/attiny_binary_watch_website/post/description/</guid>
       <description>This site describes how a binary watch was made using an Arduino programmed ATTINY and a DS1302, source code is on GitHub.
 It&amp;rsquo;s based on the RandomWatch schematics made by the people at RANDOM DATA.
 Pressing the button shows the time for some seconds, then it shows the date and month.</description>
@@ -25,10 +25,10 @@ Pressing the button shows the time for some seconds, then it shows the date and 
     
     <item>
       <title>Materials</title>
-      <link>http://replace-this-with-your-hugo-site.com/post/materials/</link>
+      <link>https://janovel.github.io/attiny_binary_watch_website/post/materials/</link>
       <pubDate>Thu, 27 Apr 2017 14:21:02 -0500</pubDate>
       
-      <guid>http://replace-this-with-your-hugo-site.com/post/materials/</guid>
+      <guid>https://janovel.github.io/attiny_binary_watch_website/post/materials/</guid>
       <description>To make a watch just as the one showed, you will need access to a laser cutter (for the case) and a way to make PCBs.
 You will need:
  1 x ATTINY13 1 x DS1302 1 x 32.768kHz crystal 1 x push button 1 x CR2032 battery (not pictured) 1 x CR2032 battery holder 2 x 8 pin IC sockets (optional for the fearless) 4 x 100 ohm resistors 10 x 3mm LEDs 6 x male header pins (not pictured) a way to make the PCB an Arduino (to use as ISP)  For this exact build:</description>
@@ -36,10 +36,10 @@ You will need:
     
     <item>
       <title>Hardware</title>
-      <link>http://replace-this-with-your-hugo-site.com/post/hardware/</link>
+      <link>https://janovel.github.io/attiny_binary_watch_website/post/hardware/</link>
       <pubDate>Thu, 27 Apr 2017 21:14:01 -0500</pubDate>
       
-      <guid>http://replace-this-with-your-hugo-site.com/post/hardware/</guid>
+      <guid>https://janovel.github.io/attiny_binary_watch_website/post/hardware/</guid>
       <description>I followed the schematic provided by the folks at RANDOM DATA.
 Testing the circuit on a breadboard.
 The design has a single sided PCB, since it was easier for me to etch it.
@@ -51,10 +51,10 @@ Since I wanted a different component arrangement than that of the RandomWatch I 
     
     <item>
       <title>Software</title>
-      <link>http://replace-this-with-your-hugo-site.com/post/software/</link>
+      <link>https://janovel.github.io/attiny_binary_watch_website/post/software/</link>
       <pubDate>Thu, 27 Apr 2017 17:30:22 -0500</pubDate>
       
-      <guid>http://replace-this-with-your-hugo-site.com/post/software/</guid>
+      <guid>https://janovel.github.io/attiny_binary_watch_website/post/software/</guid>
       <description>To be able to program the ATTINY13 with Arduino I used MCUdude&amp;rsquo;s MicroCore.
 It is necessary to have an ISP programmer to upload the code to the watch, if you don&amp;rsquo;t have one you can use your Arduino as one. To save battery life I made the ATTINY use its internal 128 kHz clock, so a small modification is needed in the Arduino ISP sketch file.
 This line: #define SPI_CLOCK (1000000/6) should be changed to this: #define SPI_CLOCK (128000/6).</description>
@@ -62,10 +62,10 @@ This line: #define SPI_CLOCK (1000000/6) should be changed to this: #define SPI_
     
     <item>
       <title>FAQ</title>
-      <link>http://replace-this-with-your-hugo-site.com/post/faq/</link>
+      <link>https://janovel.github.io/attiny_binary_watch_website/post/faq/</link>
       <pubDate>Thu, 27 Apr 2017 19:20:04 -0500</pubDate>
       
-      <guid>http://replace-this-with-your-hugo-site.com/post/faq/</guid>
+      <guid>https://janovel.github.io/attiny_binary_watch_website/post/faq/</guid>
       <description>How long does the battery last? Right now the attiny binary watch draws 44uA when on sleep mode. This means that a regular CR2032 lasts for about 6 months.
 How can I set the watch time? This is one of the main drawbacks of this design. In order to set the time on the watch the code needs to be reuploaded (so you need to be near a computer that has the Arduino IDE installed).</description>
     </item>
