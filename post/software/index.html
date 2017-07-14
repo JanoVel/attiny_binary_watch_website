@@ -1,0 +1,84 @@
+	<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en-us" lang="en-us">
+<head>
+  <link href="http://gmpg.org/xfn/11" rel="profile">
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <meta name="generator" content="Hugo 0.20.6" />
+
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+
+  
+  <title>Software &middot; ATTINY binary watch</title>
+  
+
+  
+  <link rel="stylesheet" href="http://replace-this-with-your-hugo-site.com/css/poole.css">
+  <link rel="stylesheet" href="http://replace-this-with-your-hugo-site.com/css/syntax.css">
+  <link rel="stylesheet" href="http://replace-this-with-your-hugo-site.com/css/hyde.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=PT+Sans:400,400italic,700|Bungee">
+
+  
+  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="/apple-touch-icon-144-precomposed.png">
+  <link rel="shortcut icon" href="/favicon.png">
+
+  
+  <link href="" rel="alternate" type="application/rss+xml" title="ATTINY binary watch" />
+</head>
+
+	<body class="theme-base-0d ">
+		<div class="sidebar">
+  <div class="container sidebar-sticky">
+    <div class="sidebar-about">
+      <a href="http://replace-this-with-your-hugo-site.com/"><h1>ATTINY binary watch</h1></a>
+      <p class="lead">
+       A DIY project made with an ATTINY13, a DS1302 and programmed with Arduino 
+      </p>
+    </div>
+
+    <ul class="sidebar-nav">
+      <li><a href="/">Home</a> </li>
+      
+        <li><a href="/post/materials/"> Materials </a></li>
+      
+        <li><a href="/post/hardware/"> Hardware </a></li>
+      
+        <li><a href="/post/software/"> Software </a></li>
+      
+        <li><a href="/post/faq/"> FAQ </a></li>
+      
+    </ul>
+
+    <p>CC</p>
+  </div>
+</div>
+
+
+		<div class="content container">
+			<div class="post">
+			 	<h1>Software</h1>
+			  
+			      <p>To be able to program the ATTINY13 with Arduino I used <a href="https://github.com/MCUdude/MicroCore">MCUdude&rsquo;s MicroCore</a>.</p>
+
+<p>It is necessary to have an ISP programmer to upload the code to the watch, if you don&rsquo;t have one you can <a href="https://www.arduino.cc/en/Tutorial/ArduinoISP">use your Arduino as one</a>.
+To save battery life I made the ATTINY use its internal 128 kHz clock, so a small modification is needed in the Arduino ISP sketch file.</p>
+
+<p>This line: <code>#define SPI_CLOCK    (1000000/6)</code> should be changed to this: <code>#define SPI_CLOCK     (128000/6)</code>.</p>
+
+<p>Due to space and single sided etching limitations, the ISP pins in the watch are not standard. Here&rsquo;s a pinout of the watch pins:</p>
+
+<p><img src="/img/pinout.png" alt="isp pinout" title="watch isp pinout" /></p>
+
+<p>If this pinout does not makes sense and you are using an Arduino as ISP you can follow the wiring described on <a href="http://www.instructables.com/id/Programming-an-ATTiny13A-using-Arduino-servo-int/">this instructable</a>. The only pin headers not directly next to their corresponding ATTINY pin are the reset and ground pins.</p>
+
+<p>The watch&rsquo;s code basically makes the ATTINY read (or set) the time on the DS1302 and turn on the corresponding LEDs to display the time and date when the push button is pressed. After this, the watch enters into sleep mode util it&rsquo;s awakened by another button press.</p>
+
+<p>I used <a href="https://en.wikipedia.org/wiki/Charlieplexing">Charlieplexing</a> to be able to switch the 10 LEDs on and off with 4 ATTINY pins.</p>
+
+			</div>
+
+			
+		</div>
+
+  </body>
+</html>

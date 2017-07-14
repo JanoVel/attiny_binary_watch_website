@@ -1,0 +1,83 @@
+	<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en-us" lang="en-us">
+<head>
+  <link href="http://gmpg.org/xfn/11" rel="profile">
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <meta name="generator" content="Hugo 0.20.6" />
+
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+
+  
+  <title>FAQ &middot; ATTINY binary watch</title>
+  
+
+  
+  <link rel="stylesheet" href="http://replace-this-with-your-hugo-site.com/css/poole.css">
+  <link rel="stylesheet" href="http://replace-this-with-your-hugo-site.com/css/syntax.css">
+  <link rel="stylesheet" href="http://replace-this-with-your-hugo-site.com/css/hyde.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=PT+Sans:400,400italic,700|Bungee">
+
+  
+  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="/apple-touch-icon-144-precomposed.png">
+  <link rel="shortcut icon" href="/favicon.png">
+
+  
+  <link href="" rel="alternate" type="application/rss+xml" title="ATTINY binary watch" />
+</head>
+
+	<body class="theme-base-0d ">
+		<div class="sidebar">
+  <div class="container sidebar-sticky">
+    <div class="sidebar-about">
+      <a href="http://replace-this-with-your-hugo-site.com/"><h1>ATTINY binary watch</h1></a>
+      <p class="lead">
+       A DIY project made with an ATTINY13, a DS1302 and programmed with Arduino 
+      </p>
+    </div>
+
+    <ul class="sidebar-nav">
+      <li><a href="/">Home</a> </li>
+      
+        <li><a href="/post/materials/"> Materials </a></li>
+      
+        <li><a href="/post/hardware/"> Hardware </a></li>
+      
+        <li><a href="/post/software/"> Software </a></li>
+      
+        <li><a href="/post/faq/"> FAQ </a></li>
+      
+    </ul>
+
+    <p>CC</p>
+  </div>
+</div>
+
+
+		<div class="content container">
+			<div class="post">
+			 	<h1>FAQ</h1>
+			  
+			      
+
+<h2 id="how-long-does-the-battery-last">How long does the battery last?</h2>
+
+<p>Right now the attiny binary watch draws 44uA when on sleep mode. This means that a regular CR2032 lasts for about 6 months.</p>
+
+<h2 id="how-can-i-set-the-watch-time">How can I set the watch time?</h2>
+
+<p>This is one of the main drawbacks of this design. In order to set the time on the watch the code needs to be reuploaded
+(so you need to be near a computer that has the Arduino IDE installed).</p>
+
+<h2 id="can-i-use-other-attiny-chips">Can I use other ATTINY chips?</h2>
+
+<p>The code fits into the ATTINY13 and does not use any function specific to the chip, so if the pinout is the same and you
+can upload Arduino files to it then it should work. I havent tried it yet.</p>
+
+			</div>
+
+			
+		</div>
+
+  </body>
+</html>
